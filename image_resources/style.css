@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+html{
+scroll-behavior: smooth;
+}
+
+
+:root{
+--font: 'Open Sans', sans-serif;
+--fontw1: 300;
+--fontw2: 400;
+}
+
+*{
+box-sizing: content-box;
+padding: 0;
+margin: 0;
+}
+
+body{
+font-family: var(--font);
+background: #ffffff;
+color: #333;
+line-height: 1.6;
+}
+
+ul{
+list-style: none;
+}
+
+a{
+color: #333;
+text-decoration: none;
+}
+
+h1, h2{
+font-weight: var(--fontw1);
+line-height: 1.2;
+}
+
+
+p{
+margin: 10px 0;
+}
+
+
+img{
+width: 100%;
+transition: all 300ms;
+}
+
+
+/* navbar */
+
+.navbar{
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #333;
+color: white;
+opacity: 0.9;
+width: 100%;
+height: 70px;
+position: fixed;
+top: 0;
+padding: 0 30px;
+z-index: 1991 !important;
+transition: 0.5s ease-in;
+
+}
+
+.navbar.top{
+background: transparent;
+}
+
+.navbar a{
+color: white;
+padding: 10px 20px;
+margin: 0 5px;
+}
+
+.navbar a:hover{
+border-bottom: #28a745 2px solid;
+}
+
+.navbar ul{
+display: flex;
+margin-right: 40px;
+}
+
+.navbar .logo {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+/* header */
+
+.hero{
+background: url(home/showcase2.jpg) no-repeat center center / cover;
+height: 100vh;
+position: relative;
+color: #ffffff;
+}
+
+.hero .content{
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+height: 100%;
+padding: 0 20px;
+}
+
+.hero .content h1{
+font-size: 3.5rem;
+font-weight: var(--fontw2);
+}
+
+.hero .content p{
+font-size: 1.4rem;
+max-width: 38rem;
+margin: 20px 0 30px;
+}
+
+.hero::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgb(2,0,36);
+background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0,0,0,0.4009978991596639) 80%);
+}
+
+.hero *{
+z-index: 10;
+}
+
+
+.hero.blog{
+background-image: url('home/blog.jpg');
+height: 30vh;
+}
+/* icons */
+
+.icons h3{
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.icons i{
+background-color: #28a745; 
+color: white;
+padding: 1rem;
+border-radius: 50%;
+margin-bottom: 15px;
+border: none;
+}
+
+
+
+
+.cases img:hover {
+opacity: .5; 
+
+}
+
+.team img{
+border-radius: 10px;
+
+box-shadow:
+0 0.5px 0.7px rgba(0, 0, 0, 0.02),
+0 1.6px 2.2px rgba(0, 0, 0, 0.03),
+0 7px 10px rgba(0, 0, 0, 0.05)
+;
+}
+
+.callback-form{
+width: 100%;
+padding: 20px 0;
+}
+
+.callback-form label{
+display: block;
+margin-bottom: 5px;
+}
+
+.callback-form .form-control{
+margin-bottom: 15px;
+}
+
+.callback-form input{
+width: 100%;
+padding: 4px;
+height: 30px;
+border: rgb(221, 221, 221) 2px solid;
+border-radius: 5px;
+}
+
+.callback-form input:focus{
+outline:none; 
+border-bottom: #28a745 2px solid;
+border-radius: 5px;
+}
+
+.callback-form .btn{
+padding:  8px 0;
+margin-top: 20px;
+font-size: 1.5rem;
+}
+
+/* post */
+
+.post{
+padding: 20px 20px;
+}
+
+.post h2{
+font-size: 40px;
+margin-bottom: 20px;
+padding-bottom: 10px;
+border-bottom: #ccc solid 1px;
+}
+
+.post .meta{
+margin-bottom:  30px;
+}
+
+.post img{
+width: 600px;
+border-radius: 5px;
+display: block;
+margin: auto;
+margin-bottom: 30px;
+}
+
+.post p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* footer */
+
+footer{
+flex-direction: column;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+height: 200px;
+
+}
+
+footer p{
+width: 260px; 
+
+}
+
+
+.footer a{
+color: #fff;
+margin-right: 10px;
+margin-left: 10px;
+margin-bottom: 15px;
+
+}
+
+.footer a:hover{
+color: #28a745;
+}
+
+/* mobile */
+
+@media(max-width: 768px){
+.navbar{
+flex-direction: column;
+height: 80px;
+padding: 5px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.navbar .logo{
+text-align: center;
+display: flex;
+justify-content: center;
+}
+
+.navbar a{
+padding: 5px;
+}
+
+.navbar ul{
+padding-right: 0;
+margin-right: 0;
+margin: 0 auto;
+}
+
+.hero .content h1{
+font-size: 2.5rem;
+}
+
+.flex-items{
+flex-direction: column;
+}
+
+
+.post img{
+width: 80%;
+
+}
+
+.content.blog-1 h1{
+justify-content: end;
+margin-top: 100px;
+}
